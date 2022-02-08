@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NewsController!{% endblock %}
+
+{% block body %}
+
+    <div class="slider">
+        <div class="slide-text">
+            Découvrez <span>l'espace</span>
+            comme jamais
+            auparavant
+        </div>
+    </div>
+
+        <div class="news-box">
+          <h3>Nos articles</h3>
+            <div class="news-box-group">
+                {% for item in news %}
+                    <div class="news-box-item" style="background: url({{ item.cover }}) no-repeat center center ">
+                        <div class="overlay">
+                            <h3>{{ item.title|e }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+    <form method="post" action="">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Libellé</label>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <textarea   name="content" class="form-control" ></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">cover</label>
+            <input type="file" class="form-control" id="exampleInputEmail1" >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
